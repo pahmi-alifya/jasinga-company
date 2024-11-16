@@ -4,8 +4,8 @@ type navItems = {
 }[]
 
 export const navItems: navItems = [
-  { label: "Features", href: "#" },
-  { label: "Workflow", href: "#" },
+  { label: "Products", href: "#" },
+  { label: "Categories", href: "#" },
   { label: "Pricing", href: "#" },
   { label: "Testimonials", href: "#" },
 ]
