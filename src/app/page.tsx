@@ -1,4 +1,4 @@
-import { HeroSection, Navbar } from "@/components"
+import { HeroSection, Navbar } from "@/app/components"
 
 export default function Home() {
   return (
