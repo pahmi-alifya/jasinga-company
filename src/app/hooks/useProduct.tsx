@@ -36,8 +36,8 @@ export const useProduct = () => {
           return { ...product, image }
         })
         setData(combinedData)
-      } catch (error: any) {
-        setIsError(error)
+      } catch (error) {
+        setIsError(error as Error)
         console.error("Error fetching data:", error)
       } finally {
         setIsLoading(false)
