@@ -3,7 +3,7 @@ import React from "react"
 
 export function HeroSection() {
   return (
-    <div className="flex flex-col items-center mt-6 lg:mt-20 mx-10">
+    <div className="flex flex-col items-center mt-6 lg:mt-20">
       <h1 className="text-4xl sm:text-6xl lg:test-7xl text-center tracking-wide">
         All the products you need <br />
         <span className="bg-gradient-to-r from-blue-300 to-blue-600 text-transparent bg-clip-text">
