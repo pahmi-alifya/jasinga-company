@@ -3,11 +3,21 @@
 import React from "react"
 import { useProduct } from "@/app/hooks/useProduct"
 import { CardContent } from "./CardContent"
+import { ShimmerCard } from "./Shimmer"
 
 export function ProductSection() {
   const { isLoading, data: products } = useProduct()
 
-  if (isLoading) return
+  const renderProduct = () => {
+    if (isLoading) return <ShimmerCard />
+
+    return products?.map((product, index) => (
+      <CardContent
+        product={product}
+        key={index}
+      />
+    ))
+  }
 
   return (
     <div className="relative mt-36 border-b border-neutral-800 min-h-[800px]">
@@ -27,12 +37,7 @@ export function ProductSection() {
         </p>
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 mt-10 lg:mt-20 justify-around gap-5">
-        {products?.map((product, index) => (
-          <CardContent
-            product={product}
-            key={index}
-          />
-        ))}
+        {renderProduct()}
       </div>
     </div>
   )

@@ -13,9 +13,11 @@ export function CardContent({ product }: CardContentProps) {
           <Image
             src={product?.image || ""}
             alt={product.name}
-            height={1000}
-            width={1000}
+            placeholder="blur"
+            height={500}
+            width={500}
             priority
+            blurDataURL="/next.svg"
           />
         </div>
         <div className="p-4 h-full">
