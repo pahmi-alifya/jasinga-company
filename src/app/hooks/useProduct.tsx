@@ -1,15 +1,10 @@
 "use client"
 import { useState, useEffect } from "react"
+import { Product } from "../components/CardContent"
 
 type Image = {
   id: string[]
   image: string
-}
-
-type Product = {
-  id: string
-  name: string
-  image?: string
 }
 
 export const useProduct = () => {
