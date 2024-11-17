@@ -2,7 +2,10 @@ import React from "react"
 
 export function ShimmerCard() {
   return Array.from({ length: 8 }).map((_, index) => (
-    <div key={index}>
+    <div
+      key={index}
+      data-testid="shimmer"
+    >
       <div className="space-y-5 rounded-2xl bg-white/5 p-4">
         <div className="h-52 rounded-lg bg-rose-100/10"></div>
         <div className="space-y-3">
